@@ -5,7 +5,7 @@ class EstoqueRepositoryImpl(EstoqueRepository):
     def __init__(self):
         self.produtos = {}
     
-    def salvar_produto(self, produto_uuid: str, nome: str, preco: float, quantidade: int) -> dict:
+    def save(self, produto_uuid: str, nome: str, preco: float, quantidade: int) -> dict:
         
         return {
             "produto_uuid": produto_uuid,
@@ -15,7 +15,7 @@ class EstoqueRepositoryImpl(EstoqueRepository):
             "status": "201: salvo lindamente!"
         }
         
-    def buscar_produto_pelo_id(self, produto_uuid: str) -> dict:
+    def find_by_id(self, produto_uuid: str) -> dict:
         produto = self.produtos.get(produto_uuid)
         return {
             "produto_uuid": produto_uuid,
@@ -25,7 +25,7 @@ class EstoqueRepositoryImpl(EstoqueRepository):
             "status" : "200: produto encontrado com maestria!"
         }
     
-    def atualizar_produto(self, produto_uuid: str, nome: str, preco: float, quantidade: int) -> dict:
+    def update(self, produto_uuid: str, nome: str, preco: float, quantidade: int) -> dict:
         
         produto = self.produtos.get(produto_uuid)
         
@@ -46,7 +46,7 @@ class EstoqueRepositoryImpl(EstoqueRepository):
             "status": "404: Produto não encontrado!"
         }
         
-    def deletar_produto(self, produto_uuid: str) -> dict:
+    def delete(self, produto_uuid: str) -> dict:
         produto = self.produtos.pop(produto_uuid, None)
         
         if produto:
@@ -61,5 +61,5 @@ class EstoqueRepositoryImpl(EstoqueRepository):
         }
         
     
-    def listar_produtos(self) -> list:
+    def list(self) -> list:
         return list(self.produtos.values())

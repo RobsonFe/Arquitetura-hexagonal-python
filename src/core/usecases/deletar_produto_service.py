@@ -8,7 +8,7 @@ class DeletarProdutoService(DeletarProdutoUseCase):
     def __init__(self, repository:EstoqueRepository):
         self.repository = repository
     
-    def remover_produto(self, produto_id:str) -> dict:
+    def delete(self, produto_id:str) -> dict:
         
         if not produto_id:
             raise ProdutoError(produto_id)

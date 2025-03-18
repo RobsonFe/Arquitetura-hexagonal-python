@@ -18,7 +18,7 @@ quantidade = 10
 # Simulando a chamada da API
 
 #Post
-produto = controller.handle_produto(
+produto = controller.execute(
     produto_uuid=produto_uuid, 
     nome=nome, 
     preco=preco, 

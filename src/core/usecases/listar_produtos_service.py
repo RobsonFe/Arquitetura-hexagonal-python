@@ -9,9 +9,9 @@ class ListarProdutos(ListarProdutosUseCase):
     def __init__(self, repository: EstoqueRepository):
         self.repository = repository
 
-    def listar_produtos(self) -> list:
+    def list(self) -> list:
         
         if not self.repository:
             raise ProdutoSemEstoqueError()
         
-        return self.repository.listar_produtos()
+        return self.repository.list()
