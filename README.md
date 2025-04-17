@@ -6,6 +6,6 @@ Esse projeto é um exemplo abstrato de como seria estruturado uma arquitetura `H
 
 ## Referencias:
 
-[Engenharia Moderna: O que é Arquitetura Hexagonal ?]("https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html")
+[Engenharia Moderna: O que é Arquitetura Hexagonal ?](https://engsoftmoderna.info/artigos/arquitetura-hexagonal.html)
 
-[Relação: Principios S.O.L.I.D com Arquitetura Hexagonal]("https://dev.to/pedropietro/relacao-principios-solid-e-a-arquitetura-hexagonal-103l")
+[Relação: Principios S.O.L.I.D com Arquitetura Hexagonal](https://dev.to/pedropietro/relacao-principios-solid-e-a-arquitetura-hexagonal-103l)
