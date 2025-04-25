@@ -10,25 +10,42 @@ repository = EstoqueRepositoryImpl()
 use_case = CriarProdutoService(repository=repository)
 controller = CriarProdutoController(use_case=use_case)
 
-produto_uuid = str(uuid.uuid4()) 
+produto_uuid = str(uuid.uuid4())
 nome = "Notebook"
 preco = 2500.0
 quantidade = 10
 
 # Simulando a chamada da API
 
-#Post
+# Post
 produto = controller.execute(
-    produto_uuid=produto_uuid, 
-    nome=nome, 
-    preco=preco, 
+    produto_uuid=produto_uuid,
+    nome=nome,
+    preco=preco,
     quantidade=quantidade
-    )
+)
 
+# Get
+produto = controller.execute(
+    produto_uuid=produto_uuid
+)
 
-if __name__== "__main__":
+# Put
+produto = controller.execute(
+    produto_uuid=produto_uuid,
+    nome=nome,
+    preco=preco,
+    quantidade=quantidade
+)
+
+# Delete
+produto = controller.execute(
+    produto_uuid=produto_uuid
+)
+
+if __name__ == "__main__":
     print(f"Produto criado: {json.dumps(
-        produto, 
-        indent=4, 
+        produto,
+        indent=4,
         ensure_ascii=False
-        )}")
+    )}")
