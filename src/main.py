@@ -25,24 +25,6 @@ produto = controller.execute(
     quantidade=quantidade
 )
 
-# Get
-produto = controller.execute(
-    produto_uuid=produto_uuid
-)
-
-# Put
-produto = controller.execute(
-    produto_uuid=produto_uuid,
-    nome=nome,
-    preco=preco,
-    quantidade=quantidade
-)
-
-# Delete
-produto = controller.execute(
-    produto_uuid=produto_uuid
-)
-
 if __name__ == "__main__":
     print(f"Produto criado: {json.dumps(
         produto,
